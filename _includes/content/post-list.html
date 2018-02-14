@@ -1,12 +1,35 @@
+{% comment %} 多语言 {% endcomment %}
+{% if site.language != "" or site.language != null %}
+{% assign lang = site.data.lang[site.language] %}
+{% endif %}
+
+{% comment %} 输出文章列表 {% endcomment %}
+{% for post in paginator.posts %}
+
+{% comment %} 判断是否有thumbnail {% endcomment %}
+{% if post.thumbnail == "" or post.thumbnail == null %}
+{% assign thumbnailStatus = true  %}
+{% else %}
+{% assign thumbnailStatus = false  %}
+{% endif %}
+
 <div class="mdc-card kmdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-    <a href="#!" class="mdc-card__media mdc-card__media--square kmdc-card__media" style="background-image: url(https://material-components-web.appspot.com/images/16-9.jpg);">
+    <a href="{{post.url | prepend: site.baseurl}}" class="mdc-card__media mdc-card__media--square kmdc-card__media mdc-ripple-surface {% if thumbnailStatus %} mdc-theme--primary-bg mdc-theme--text-primary-on-primary{% endif %}" data-mdc-auto-init="MDCRipple"  style="background-image: url({{post.thumbnail}});">
         <div class="mdc-card__media-content kmdc-card__media-content--title">
-            <div class="kmdc-card__media-title mdc-typography--title">
-                Vacation Photos
+
+            {% if thumbnailStatus %}
+            <div class="kmdc-card__media-only-title">
+                    <p class="mdc-typography--title">{{post.title}}</p>
             </div>
+            {% else %}
+            <div class="kmdc-card__media-title mdc-typography--title">
+                    {{post.title}}
+            </div>
+            {% endif %}
+
         </div>
     </a>
-    <div class="kmdc-card__secondary mdc-typography--body1"><span>Favorable business conditions have allowed startups to secure more fundraising deals compared to last year.</span></div>
+    <div class="kmdc-card__secondary mdc-typography--body1"><span>{{ post.excerpt | strip_html}}</span></div>
     <hr class="mdc-list-divider">
     <div class="kmdc-card__meta">
         <div class="kmdc-card__meta-avatar" style="background-image: url(https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png);"></div>
@@ -16,3 +39,5 @@
         </div>
     </div>
 </div>
+
+{% endfor %}

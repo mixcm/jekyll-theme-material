@@ -1,0 +1,28 @@
+title: "Material"
+language: "zh_CN"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+
+# Plugins settings
+## paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Build settings
+highlighter: rouge
+exclude: [
+  "node_modules",
+  "LICENSE",
+  "package.json",
+  "README.md",
+  "Gemfile",
+  "gulpfile.babel.js",
+  ".babelrc",
+  ".gitignore",
+  "sass",
+  "scss",
+  "validate",
+  "*.gemspec"
+]

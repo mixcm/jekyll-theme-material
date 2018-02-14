@@ -1,14 +1,18 @@
-
+{% comment %} 多语言 {% endcomment %}
+{% if site.language != "" or site.language != null %}
+{% assign lang = site.data.lang[site.language] %}
+{% endif %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{%if lang %}{{lang.lang}}{% else %}en{% endif %}">
 {% include head.html %}
 <body>
     <main>
-        <div class="mdc-layout-grid kmdc-max-width">
+        <div class="mdc-layout-grid kmdc-max-width" id="barba-wrapper">
                 {{ content }}
         </div>
     </main>
     {% include script/mdc.html %}
+    {% include script/barba.html %}
 </body>
 </html>
