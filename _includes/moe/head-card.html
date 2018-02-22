@@ -1,0 +1,54 @@
+<div class="mdc-card kmdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-8-desktop">
+    <div class="mdc-card__media mdc-card__media--square kmdc-card__media mdc-ripple-surface mdc-theme--primary-bg mdc-theme--text-primary-on-primary mdc-ripple-upgraded"
+        data-mdc-auto-init="MDCRipple">
+        <div class="mdc-card__media-content kmdc-card__media-content--title">
+            <div class="kmdc-card__media-title mdc-typography--title">
+                Title
+            </div>
+        </div>
+    </div>
+    <hr class="mdc-list-divider">
+    <div class="kmdc-card__meta">
+        <div class="kmdc-card__meta-avatar" style="background-image: url(https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png);"></div>
+        <div class="kmdc-card__meta-text">
+            <strong>KeJun</strong>
+        </div>
+    </div>
+</div>
+
+<div class="mdc-card kmdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet">
+    <div class="mdc-card__media mdc-card__media--square kmdc-card__media kmdc-card__media-head__small mdc-theme--primary-bg mdc-theme--text-primary-on-primary ">
+        <img src="https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" alt="logo">
+    </div>
+    <hr class="mdc-list-divider">
+    <div class="kmdc-card__meta">
+        <div class="kmdc-card__meta-text">
+            <strong>KeJun</strong>
+        </div>
+        <div class="mdc-card__action-icons">
+            <i id="kmdc-menu-button" class="material-icons mdc-card__action mdc-card__action--icon mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                data-mdc-auto-init="MDCRipple" tabindex="0" role="button" data-mdc-ripple-is-unbounded title="More options">more_vert</i>
+        </div>
+        <div class=" mdc-menu-anchor">
+            <div id="kmdc-menu" class="mdc-menu" style="position: absolute;" tabindex="-1">
+                <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+                    <li class="mdc-list-item" role="menuitem" tabindex="0">
+                        RSS
+                    </li>
+                    <li class="mdc-list-item" role="menuitem" tabindex="0">
+                        Site Map
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        main.installMenu('#kmdc-menu', '#kmdc-menu-button');
+    });
+</script>

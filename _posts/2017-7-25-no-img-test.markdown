@@ -21,8 +21,6 @@ thumbnail:
   <p>按下 <kbd>Esc</kbd> 可以关闭对话框</p>
   <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 
-[![NSolid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
 
   - Type some Markdown on the left

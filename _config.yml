@@ -14,7 +14,7 @@ paginate_path: "/blog/page:num/"
 highlighter: rouge
 exclude: [
   "node_modules",
-  "LICENSE",
+  "LICENSE", 
   "package.json",
   "README.md",
   "Gemfile",

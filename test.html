@@ -1,0 +1,57 @@
+--- 
+layout: default 
+---
+
+<div class="kmdc-blog__posts  mdc-layout-grid__inner barba-container" data-namespace="home">
+
+</div>
+
+<button id="kmdc-menu-button" class="mdc-button mdc-button--raised demo-button demo-button--normal">test</button>
+<div id="kmssdc-menu" class="mdc-menu" style="position: absolute;" tabindex="-1">
+    <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+        <li class="mdc-list-item" role="menuitem" tabindex="0">
+            A Menu Item
+        </li>
+        <li class="mdc-list-item" role="menuitem" tabindex="0">
+            Another Menu Item
+        </li>
+    </ul>
+</div>
+<div id="toolbar" class="toolbar mdc-menu-anchor">
+    <div id="kmdc-menu" class="mdc-menu">
+        <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                A Menu Item
+            </li>
+            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                Another Menu Item
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // document.addEventListener("DOMContentLoaded", function (event) {
+    // Instantiation
+    var menuEl = document.querySelector('#kmdc-menu');
+    var menu = new mdc.menu.MDCMenu(menuEl);
+    var menuButtonEl = document.querySelector('#kmdc-menu-button');
+
+    // Toggle menu open
+    menuButtonEl.addEventListener('click', function () {
+        menu.open = !menu.open;
+    });
+
+    // Listen for selected item
+    menuEl.addEventListener('MDCMenu:selected', function (evt) {
+        var detail = evt.detail;
+    });
+
+    // Set Anchor Corner to Bottom End
+    menu.setAnchorCorner(mdc.menu.MDCMenuFoundation.Corner.BOOTOM_END);
+
+    // Turn off menu open animations
+    menu.quickOpen = false;
+    // });
+
+</script>

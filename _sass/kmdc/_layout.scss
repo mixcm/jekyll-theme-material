@@ -6,6 +6,14 @@
     .kmdc-card__media{
         background-position: 50% 50%;
         height: 250px;
+        &.kmdc-card__media-head__small{
+            display: flex;
+            align-items: center;
+            :first-child{
+                margin: auto;
+                width: 64px;
+            }
+        }
     }
     .kmdc-card__media-content--title{
         display: -webkit-box;
@@ -20,8 +28,8 @@
         justify-content: flex-end;
         .kmdc-card__media-title {
             padding: 8px 16px;
-            background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
-            background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.3)));
+            background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
             color: white;
         }
         .kmdc-card__media-only-title{
@@ -63,6 +71,7 @@
     .kmdc-card__meta{
         display: flex;
         padding: 1rem;
+        align-items: center;
         .kmdc-card__meta-avatar{
             width: 44px;
             height: 44px;
@@ -75,6 +84,9 @@
         .kmdc-card__meta-text{
             display: flex;
             flex-direction: column;
+            :last-child:not(span){
+                line-height: 44px;
+            }
         }
     }
 

@@ -1,0 +1,12 @@
+<script>
+var main = new Object();
+main.installMenu = function(a,b){
+    var menuEl = document.querySelector(a);
+    if (!menuEl) return;
+    var menu = new mdc.menu.MDCMenu(menuEl);
+    var menuButtonEl = document.querySelector(b);
+    menuButtonEl.addEventListener('click', function () {
+        menu.open = !menu.open;
+    });
+}
+</script>

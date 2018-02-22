@@ -27,6 +27,7 @@
     Barba.Prefetch.init();
     Barba.Dispatcher.on('transitionCompleted', function () {
         window.mdc.autoInit();
+        main.installMenu('#kmdc-menu','#kmdc-menu-button');
     });
     Barba.Dispatcher.on('newPageReady', function (a,b,c,d) {
         c.classList.add("move");
