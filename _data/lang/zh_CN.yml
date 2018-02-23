@@ -1,1 +1,5 @@
 lang: zh
+moe:
+  head_card: 
+      rss: "订阅"
+      sitemap: "站点地图"

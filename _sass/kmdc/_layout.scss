@@ -92,6 +92,22 @@
 
 }
 
+.mdc-list-item{
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.kmdc-paginator{
+    .kmdc-paginator__text{
+        text-align: center;
+    }
+    .kmdc-paginator__button-right{
+        text-align: right;
+    }
+}
+
 .barba-container{
     -webkit-transform: translate(0, 0);
     -webkit-transition: -webkit-all 500ms;

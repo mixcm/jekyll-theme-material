@@ -1,0 +1,23 @@
+{% if paginator.total_pages > 1 %}
+<nav class="kmdc-paginator mdc-layout-grid__cell--span-12">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <i class="material-icons mdc-ripple-surface" data-mdc-auto-init="MDCRipple">arrow_back</i>
+            </a>
+            {% endif%}
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-tablet kmdc-paginator__text">
+            <span>{{paginator.page}}/{{paginator.total_pages}}</span>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet kmdc-paginator__button-right">
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <i class="material-icons mdc-ripple-surface" data-mdc-auto-init="MDCRipple">arrow_forward</i>
+            </a>
+            {% endif%}
+        </div>
+    </div>
+</nav>
+{% endif %}

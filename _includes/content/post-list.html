@@ -14,7 +14,7 @@
 {% endif %}
 
 <div class="mdc-card kmdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-    <a href="{{post.url | prepend: site.baseurl}}" class="mdc-card__media mdc-card__media--square kmdc-card__media mdc-ripple-surface {% if thumbnailStatus %} mdc-theme--primary-bg mdc-theme--text-primary-on-primary{% endif %}" data-mdc-auto-init="MDCRipple"  style="background-image: url({{post.thumbnail}});">
+    <a href="{{post.url | relative_url }}" class="mdc-card__media mdc-card__media--square kmdc-card__media mdc-ripple-surface {% if thumbnailStatus %} mdc-theme--primary-bg mdc-theme--text-primary-on-primary{% endif %}" data-mdc-auto-init="MDCRipple"  style="background-image: url({{post.thumbnail}});">
         <div class="mdc-card__media-content kmdc-card__media-content--title">
 
             {% if thumbnailStatus %}
@@ -41,3 +41,5 @@
 </div>
 
 {% endfor %}
+
+{% include paginator_button.html %}
